@@ -1,7 +1,7 @@
 import {BrowserRouter, Link, Switch, Route} from 'react-router-dom'
 
-import {HomePage} from './pages/Home'
-import {LivePricePage} from './pages/LivePrice'
+import {Landing} from './pages/Landing'
+import {SignIn} from './pages/SignIn'
 
 function App() {
   return (
@@ -12,21 +12,13 @@ function App() {
             <li>
               <Link to="/"> Home </Link>
             </li> 
-            <li>
-            <Link to="/pricing">Live Pricing</Link>
-            </li>
           </ul>
-        </div>
+        </div> 
         <Switch>
-          <Route path="/pricing">
-            <LivePricePage />
-          </Route>
           <Route path="/">
-            <HomePage />
+            <Landing />
           </Route>
         </Switch>
-        
-        // <p>hello hwollrdsl</p>
       </div>
     </BrowserRouter>
   );
